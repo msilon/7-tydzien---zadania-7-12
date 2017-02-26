@@ -1,10 +1,6 @@
-function rysujChoinke(rozmiarChoinki) {
-    for(var n=1; n<=rozmiarChoinki; n++) {
-        var star="";
-        for(var i = 1; i <= n*2 - 1; i++) {
-            star += "*";
-        }
-        console.log(star);
-    }
+var buttons = document.getElementsByClassName('button');
+
+for(var i=0; i < buttons.length; i++) {
+	var buttonsInnerText = buttons[i].innerText;
+	alert(buttonsInnerText);
 }
-rysujChoinke(5);
