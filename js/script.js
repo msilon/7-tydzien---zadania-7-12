@@ -1,6 +1,8 @@
-var buttons = document.getElementsByClassName('button');
+var itemsByTagName = document.getElementsByTagName('li');
 
-for(var i=0; i < buttons.length; i++) {
-	var buttonsInnerText = buttons[i].innerText;
-	alert(buttonsInnerText);
-}
+var add = document.getElementById('addElem'),
+	list = document.getElementById('list');
+
+add.addEventListener('click', function() {
+	list.innerHTML += '<li>item' + " " + itemsByTagName.length + '</li>';
+});
