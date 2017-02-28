@@ -39,8 +39,6 @@ function setGameElements() {
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
       break;
-    case 'ended':
-        newGameBtn.innerText = 'Jeszcze raz';
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
@@ -144,14 +142,19 @@ function setGamePoints() {
 
 function resetGame() {
 	gameState = 'notStarted';
-	setGameElements();
+    computerResultElem.innerHTML = "";
+    playerResultElem.innerHTML = "";
+    playerPickElem.innerHTML = "";
+    computerPickElem.innerHTML = "";
 }
 
 function newNextGame() {
     player.score = computer.score = 0;
     gameState = 'started';
-    setGameElements();
-
+    computerResultElem.innerHTML = "";
+	playerResultElem.innerHTML = "";
+	playerPickElem.innerHTML = "";
+	computerPickElem.innerHTML = "";
     playerNameElem.innerHTML = player.name;
     setGamePoints();
 }
