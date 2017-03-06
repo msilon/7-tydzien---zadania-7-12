@@ -1,7 +1,7 @@
 function rysujChoinke(rozmiarChoinki) {
     for(var n=1; n<=rozmiarChoinki; n++) {
         var star="";
-        var space="     ";
+        for(var space = ""; space.length < rozmiarChoinki; space += " ");
         for(var i = 1; i <= n*2 - 1; i++) {
             star += "*";
         }
